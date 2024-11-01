@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+            @using (Html.BeginForm())
+            {
+        <textarea id="editor1" name="editor1">@ViewBag.EditorContent</textarea>
+                    <script>
+                        CKEDITOR.replace('editor1', {
+                            // Disable security notifications.
+                            versionCheck: false
+                        });
+                    </script>
+                <input type="submit" value="Submit" />
+            }
+</div>
